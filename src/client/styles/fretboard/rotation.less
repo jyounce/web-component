@@ -1,0 +1,59 @@
+/*********************
+ * FRETBOARD ROTATION
+ *********************/
+.fretboard {
+	// Coordinates
+	top: 22px;
+	&.right, &.left { top: 5px; }
+
+	/* Dimensions
+	 *************/
+	width: @fretboardWidth;
+	height: @fretboarHeight;
+	&.right, &.left {
+		display: block;
+		width: @fretboarHeight;
+		height: @fretboardWidth;
+	}
+
+	/* Offsets
+	 **********/
+	margin: 0 5px 23px;
+	&.right,
+	&.left  { margin: 0 0 10px; }
+	&.right { margin-right: 22px; }
+	&.left  { margin-left:  22px; }
+
+	/* Rotation
+	 ***********/
+	transform-origin: top left;
+	&.flip       { transform: translate(100%, 0) scaleX(-1); }
+	&.right      { transform: translate(100%, 0) rotate(90deg); }
+	&.right.flip { transform: translate(100%, 100%) scaleY(-1) rotate(90deg); }
+	&.left       { transform: translate(0, 100%) rotate(-90deg); }
+	&.left.flip  { transform: translate(0, 0) scale(1, -1) rotate(-90deg); }
+
+	/* Notes Rotation
+	 *****************/
+	&.flip div[class^="fret"] a b       { transform: scaleX(-1); }
+	&.right div[class^="fret"] a b      { transform: rotate(-90deg); }
+	&.right.flip div[class^="fret"] a b { transform: rotate(-90deg) scaleY(-1); }
+	&.left div[class^="fret"] a b       { transform: rotate(-90deg) scale(-1); }
+	&.left.flip div[class^="fret"] a b  { transform: rotate(-90deg) scaleX(-1); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+{
+  "name": "chordc-fretboard-demo-server",
+  "version": "0.1.0",
+  "author": "The CHORDC Authors",
+  "scripts": {
+    "start": "node rapid-build/start-server",
+    "stop": "node rapid-build/stop-server"
+  },
+  "dependencies": {
+    "cors": "^2.8.3"
+  }
+}

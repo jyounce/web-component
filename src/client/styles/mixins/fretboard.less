@@ -1,0 +1,18 @@
+/******************
+ * FRETBOARD MIXIN
+ ******************/
+#fretboard {
+	.fret(@fret, @height, @top) {
+		.fret-@{fret} {
+			top: ~'@{top}px';
+			height: ~'@{height}px';
+		}
+	}
+
+	.dev {
+		.border() {
+			@green: #04ff41;
+			border: 1px solid @green;
+		}
+	}
+}

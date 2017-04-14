@@ -1,0 +1,33 @@
+/******************
+ * FRETBOARD NOTES
+ ******************/
+.fretboard {
+	div[class^="fret"] {
+		a {
+			color: @noteColor;
+			font-size: @noteSize;
+			font-weight: @noteWeight;
+			text-decoration: none;
+			-webkit-text-stroke: @noteStroke;
+			border-radius: 2px;
+			background-color: transparent;
+			&:hover, &:focus {
+				cursor: pointer;
+				color: @noteHoverColor;
+				background-color: @noteHoverBG;
+			}
+			&:focus {
+				outline: none;
+			}
+			&:active {
+				color: @noteActiveColor;
+			}
+		}
+		a { // center text
+			#utils.text.center();
+		}
+		// a b { // hide text
+		// 	#utils.text.hide();
+		// }
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "chordc-fretboard",
+	"version": "0.1.0",
+	"dependencies": {
+		"iron-ajax": "2.0-preview",
+		"polymer": "^2.0.0-rc.3",
+		"reset-css": "^2.2.0"
+	}
+}

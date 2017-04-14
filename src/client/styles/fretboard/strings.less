@@ -1,0 +1,67 @@
+/********************
+ * FRETBOARD STRINGS
+ ********************/
+.fretboard {
+	div[class^="fret"] {
+		a {
+			position: absolute;
+			top: 0;
+			width: 20px;
+			height: 103%;
+		}
+		a b {
+			position: relative;
+		}
+	}
+
+	/* Note Positioning
+	 *******************/
+	div[class^="fret"] {
+		&.fret-0 a b { top: -4px; }
+		&.fret-1 a b { top: -1px; }
+	}
+
+	/* String Positioning
+	 *********************/
+	div[class^="fret"] {
+		a:nth-of-type(1) { left: 100px; }
+		a:nth-of-type(2) { left: 80px;  }
+		a:nth-of-type(3) { left: 60px;  }
+		a:nth-of-type(4) { left: 40px;  }
+		a:nth-of-type(5) { left: 20px;  }
+		a:nth-of-type(6) { left: 0;     }
+	}
+
+	/* Dev Guidelines
+	 *****************/
+	&.dev div[class^="fret"] {
+		a:nth-of-type(1) { left: 99px; }
+		a:nth-of-type(2) { left: 79px; }
+		a:nth-of-type(3) { left: 59px; }
+		a:nth-of-type(4) { left: 39px; }
+		a:nth-of-type(5) { left: 19px; }
+		a:nth-of-type(6) { left: -1px; }
+	}
+
+	&.dev div[class^="fret"] {
+		#fretboard.dev.border();
+		a {
+			top: -1px;
+			width: 19px;
+			#fretboard.dev.border();
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

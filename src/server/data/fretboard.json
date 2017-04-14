@@ -1,0 +1,508 @@
+[
+	{
+		"fret": 0,
+		"notes": [
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			}
+		]
+	},
+	{
+		"fret": 1,
+		"notes": [
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			}
+		]
+	},
+	{
+		"fret": 2,
+		"notes": [
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			}
+		]
+	},
+	{
+		"fret": 3,
+		"notes": [
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			}
+		]
+	},
+	{
+		"fret": 4,
+		"notes": [
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			}
+		]
+	},
+	{
+		"fret": 5,
+		"notes": [
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			}
+		]
+	},
+	{
+		"fret": 6,
+		"notes": [
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			}
+		]
+	},
+	{
+		"fret": 7,
+		"notes": [
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			}
+		]
+	},
+	{
+		"fret": 8,
+		"notes": [
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			}
+		]
+	},
+	{
+		"fret": 9,
+		"notes": [
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			}
+		]
+	},
+	{
+		"fret": 10,
+		"notes": [
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			}
+		]
+	},
+	{
+		"fret": 11,
+		"notes": [
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			}
+		]
+	},
+	{
+		"fret": 12,
+		"notes": [
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			}
+		]
+	},
+	{
+		"fret": 13,
+		"notes": [
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			}
+		]
+	},
+	{
+		"fret": 14,
+		"notes": [
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			}
+		]
+	},
+	{
+		"fret": 15,
+		"notes": [
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			}
+		]
+	},
+	{
+		"fret": 16,
+		"notes": [
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			}
+		]
+	},
+	{
+		"fret": 17,
+		"notes": [
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			}
+		]
+	},
+	{
+		"fret": 18,
+		"notes": [
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			}
+		]
+	},
+	{
+		"fret": 19,
+		"notes": [
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "D"
+			},
+			{
+				"symbol": "A"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			}
+		]
+	},
+	{
+		"fret": 20,
+		"notes": [
+			{
+				"symbol": "C"
+			},
+			{
+				"symbol": "G"
+			},
+			{
+				"symbol": "D♯"
+			},
+			{
+				"symbol": "A♯"
+			},
+			{
+				"symbol": "F"
+			},
+			{
+				"symbol": "C"
+			}
+		]
+	},
+	{
+		"fret": 21,
+		"notes": [
+			{
+				"symbol": "C♯"
+			},
+			{
+				"symbol": "G♯"
+			},
+			{
+				"symbol": "E"
+			},
+			{
+				"symbol": "B"
+			},
+			{
+				"symbol": "F♯"
+			},
+			{
+				"symbol": "C♯"
+			}
+		]
+	}
+]

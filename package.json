@@ -1,0 +1,24 @@
+{
+  "name": "chordc-fretboard",
+  "version": "0.1.0",
+  "description": "chordc-fretboard web component.",
+  "homepage": "https://chord-c.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chordc/chordc-fretboard"
+  },
+  "contributors": [
+    {
+      "name": "Judd Younce",
+      "email": "jyounce@yahoo.com",
+      "url": "https://github.com/jyounce"
+    },
+    {
+      "name": "Nor Sanavongsay",
+      "url": "https://github.com/ArtofNor"
+    }
+  ],
+  "scripts": {
+    "install-server": "cd src/server/ && npm install"
+  }
+}

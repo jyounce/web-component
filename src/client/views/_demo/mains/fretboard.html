@@ -1,0 +1,35 @@
+<div ng-controller="fretboardController">
+	<h3>
+		Fretboard
+		<nav><a href="/demo/staff">musical staff</a></nav>
+	</h3>
+
+	<form name="demoForm">
+		rotate:
+		<label class="radio">
+			<input type="radio" ng-model="rotate.direction"> none
+		</label>
+		<label class="radio">
+			<input type="radio" ng-model="rotate.direction" value="left"> left
+		</label>
+		<label class="radio">
+			<input type="radio" ng-model="rotate.direction" value="right"> right
+		</label>
+		<label class="cb">
+			<input type="checkbox" ng-model="flip"> flip
+		</label>
+	</form>
+
+	<!-- FRETBOARD -->
+	<chordc-fretboard
+		ng-attr-flip="{{flip || undefined}}"
+		ng-attr-rotate="{{rotate.direction}}">
+	</chordc-fretboard>
+
+	<!-- <chordc-fretboard></chordc-fretboard> -->
+	<!-- <chordc-fretboard flip></chordc-fretboard> -->
+	<!-- <chordc-fretboard rotate="right"></chordc-fretboard> -->
+	<!-- <chordc-fretboard rotate="right" flip></chordc-fretboard> -->
+	<!-- <chordc-fretboard rotate="left"></chordc-fretboard> -->
+	<!-- <chordc-fretboard rotate="left" flip></chordc-fretboard> -->
+</div>

@@ -1,0 +1,121 @@
+common:
+	# browser: open: false
+	# build: server: false
+
+	angular:
+		moduleName: 'demo'
+
+	spa:
+		autoInject: false
+		src:
+			filePath: 'chordc-fretboard.html'
+
+	order:
+		styles:
+			first: [
+				'bower_components/reset-css/reset.css'
+			]
+
+	dist:
+		client:
+			paths:
+				absolute: false
+
+	exclude:
+		from:
+			dist:
+				client: [
+					'bower_components/reset-css/**'
+					'bower_components/polymer/**'
+					'bower_components/shadycss/**'
+					'bower_components/webcomponentsjs/**'
+					# web components
+					'bower_components/iron-ajax/**'
+				]
+			spaFile:
+				angular:
+					files: true
+				scripts: [
+					'rapid-build/**'
+					'scripts/_demo/**'
+					'bower_components/shadycss/**'
+					'bower_components/webcomponentsjs/**'
+				]
+				styles: [
+					'styles/_demo/**'
+				]
+
+	extra:
+		copy:
+			client: [
+				'fonts/**'
+				'bower_components/reset-css/reset.css'
+				'bower_components/polymer/polymer.html'
+				'bower_components/polymer/polymer-element.html'
+				'bower_components/polymer/lib/**'
+				# web components
+				'bower_components/iron-ajax/iron-ajax.html'
+				'bower_components/iron-ajax/iron-request.html'
+				# required for legacy polymer 1.x
+				'bower_components/shadycss/*.html'
+				'bower_components/shadycss/*.min.js'
+				# required for crappy browsers
+				'bower_components/webcomponentsjs/webcomponents-lite.js'
+			]
+			server: [
+				'data/**'
+			]
+
+prod:
+	exclude:
+		from:
+			cacheBust: [
+				'bower_components/shadycss/**'
+			]
+			minFile:
+				scripts: [
+					'rapid-build/**'
+				]
+	extra:
+		minify:
+			client:
+				css: [
+					'bower_components/reset-css/reset.css'
+				]
+	minify:
+		css:
+			splitMinFile: false
+		html:
+			views: false
+			templateCache: false
+		js:
+			scripts: false
+		spa:
+			file: false
+
+# For building only the web component.
+component:
+	build:
+		server: false
+	exclude:
+		default:
+			client:
+				files: true
+		from:
+			dist:
+				client: [
+					'bower_components/webcomponentsjs/**' # todo: fix
+					'images/_demo/**'
+					'scripts/_demo/**'
+					'styles/_demo/**'
+					'views/_demo/**'
+				]
+
+# pack:
+# 	dist:
+# 		pack:
+# 			enable: true
+
+
+
+
