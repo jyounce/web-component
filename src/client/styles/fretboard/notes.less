@@ -4,7 +4,6 @@
 .fretboard {
 	div[class^="fret"] {
 		a {
-			color: @noteColor;
 			font-size: @noteSize;
 			font-weight: @noteWeight;
 			text-decoration: none;
@@ -29,5 +28,16 @@
 		// a b { // hide text
 		// 	#utils.text.hide();
 		// }
+	}
+}
+
+/* STYLES API:
+ * --chordc-fretboard-note-color
+ ********************************/
+.fretboard {
+	div[class^="fret"] {
+		a {
+			color: var(--chordc-fretboard-note-color, @noteColor);
+		}
 	}
 }

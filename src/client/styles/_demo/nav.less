@@ -1,0 +1,21 @@
+/******************
+ * DEMO NAV STYLES
+ ******************/
+nav {
+	display: inline-block;
+	a {
+		font-size: 10px;
+		text-decoration: none;
+		color: @textColor;
+		&:hover {
+			opacity: .5;
+		}
+		&:before {
+			position: relative;
+			top: -2px;
+			margin: 0 4px 0 0;
+			font-size: 70%;
+			content: '|';
+		}
+	}
+}
