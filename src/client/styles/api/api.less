@@ -1,0 +1,10 @@
+/* FRETBOARD API:
+ * --chordc-fretboard-note-color
+ ********************************/
+.fretboard {
+	div[class^="fret"] {
+		a {
+			color: var(--chordc-fretboard-note-color, @noteColor);
+		}
+	}
+}
