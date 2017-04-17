@@ -3,8 +3,8 @@ angular.module('demo').controller 'fretboardController', ['$scope', '$element',
 		# properties
 		# ==========
 		$scope.flip   = false
-		$scope.rotate = direction: undefined
-		$scope.note   = undefined;
+		$scope.rotate = undefined
+		$scope.note   = undefined
 
 		# fretboard
 		# =========
@@ -15,5 +15,18 @@ angular.module('demo').controller 'fretboardController', ['$scope', '$element',
 		fretboard.addEventListener 'note-selected', (e) ->
 			$scope.note = e.detail.note
 			$scope.$apply()
+
+		# fretboard.addEventListener 'fretboard-changed', (e) ->
+			# console.log e.detail.value
+			# $scope.fretboard = e.detail.value
+			# $scope.$apply()
+
+		# fretboard.addEventListener 'rotate-changed', (e) ->
+		# 	$scope.rotate = e.detail.value
+		# 	$scope.$apply()
+
+		# testing
+		# =======
+		# console.log fretboard.model
 
 ]

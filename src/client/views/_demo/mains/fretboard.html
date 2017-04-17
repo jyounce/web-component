@@ -8,13 +8,13 @@
 	<form name="demoForm">
 		Rotate:
 		<label class="radio">
-			<input type="radio" ng-model="rotate.direction"> none
+			<input type="radio" ng-model="rotate"> none
 		</label>
 		<label class="radio">
-			<input type="radio" ng-model="rotate.direction" value="left"> left
+			<input type="radio" ng-model="rotate" value="left"> left
 		</label>
 		<label class="radio">
-			<input type="radio" ng-model="rotate.direction" value="right"> right
+			<input type="radio" ng-model="rotate" value="right"> right
 		</label>
 		<label class="cb">
 			<input type="checkbox" ng-model="flip"> flip
@@ -26,11 +26,10 @@
 		<span>Note: {{note}}</span>
 	</div>
 
-
 	<!-- FRETBOARD -->
 	<chordc-fretboard
 		ng-attr-flip="{{flip || undefined}}"
-		ng-attr-rotate="{{rotate.direction}}">
+		ng-attr-rotate="{{rotate}}">
 	</chordc-fretboard>
 
 	<!-- <chordc-fretboard></chordc-fretboard> -->

@@ -28,10 +28,11 @@ class Fretboard extends Polymer.Element {
 				type: Boolean
 			},
 			rotate: {
-				type: String
+				type: String,
+				// notify: true
 			},
 			fretboard: {
-				type: Array
+				type: Array,
 			}
 		}
 	}
@@ -44,8 +45,9 @@ class Fretboard extends Polymer.Element {
 
 	/* response handlers
 	 ********************/
-	setFretboard(event) {
-		this.fretboard = event.detail.response;
+	setFretboard(e) {
+		// this.fretboard = e.detail.response;
+		this.set('fretboard', e.detail.response);
 	}
 
 	/* events
@@ -53,6 +55,13 @@ class Fretboard extends Polymer.Element {
 	setNote(e) {
 		// console.log(e.model.data)
 		// e.model.set('item.symbol', 'X');
+		// this.fretboard[0].notes[0].symbol = 'X'
+		// this.notifyPath('fretboard.0.notes.0.symbol')
+		// this.set('fretboard.0.notes.0.symbol', 'X')
+		// console.log(this.fretboard[0].notes[0].symbol)
+		// console.log(this.get('fretboard.*'))
+		// this.set('rotate', 'left');
+
 		var note = e.model.item.symbol;
 		this.dispatchEvent(
 			new CustomEvent(
