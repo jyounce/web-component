@@ -52,7 +52,12 @@ class Fretboard extends Polymer.Element {
 
 	/* events
 	 *********/
+	setActiveNote(e) {
+		e.currentTarget.classList.toggle('active');
+	}
+
 	setNote(e) {
+		this.setActiveNote(e);
 		// console.log(e.model.data)
 		// e.model.set('item.symbol', 'X');
 		// this.fretboard[0].notes[0].symbol = 'X'
