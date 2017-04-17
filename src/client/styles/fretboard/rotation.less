@@ -12,7 +12,6 @@
 	height: @fretboarHeight;
 	&.right, &.left {
 		display: block;
-		width: @fretboarHeight;
 		height: @fretboardWidth;
 	}
 
@@ -28,8 +27,8 @@
 	 ***********/
 	transform-origin: top left;
 	&.flip       { transform: translate(100%, 0) scaleX(-1); }
-	&.right      { transform: translate(100%, 0) rotate(90deg); }
-	&.right.flip { transform: translate(100%, 100%) scaleY(-1) rotate(90deg); }
+	&.right      { transform: translate(@fretboarHeight, 0) rotate(90deg); }
+	&.right.flip { transform: translate(@fretboarHeight, 100%) scaleY(-1) rotate(90deg); }
 	&.left       { transform: translate(0, 100%) rotate(-90deg); }
 	&.left.flip  { transform: translate(0, 0) scale(1, -1) rotate(-90deg); }
 
