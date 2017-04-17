@@ -2,6 +2,10 @@ common:
 	# browser: open: false
 	# build: server: false
 
+	ports:
+		server: 5000
+		reload: 5001
+
 	angular:
 		moduleName: 'demo'
 
