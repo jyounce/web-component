@@ -40,26 +40,35 @@ class Fretboard extends Polymer.Element {
 	/* computed bindings
 	 ********************/
 	_flip(flip) {
-		return flip ? 'flip' : ''
+		return flip ? 'flip' : '';
+	}
+	_activeNote(active) {
+		return active ? 'active' : '';
 	}
 
 	/* response handlers
 	 ********************/
 	setFretboard(e) {
-		// this.fretboard = e.detail.response;
 		this.set('fretboard', e.detail.response);
 	}
 
 	/* events
 	 *********/
 	setActiveNote(e) {
-		e.currentTarget.classList.toggle('active');
+		var fretboard = this.get(`fretboard`);
+		for (var i = 0; i < fretboard.length; i++) {
+			this.set(`fretboard.${i}.notes.${e.model.index}.active`, false);
+		}
+		e.model.set('item.active', !e.model.item.active);
+		// console.log(e.model.index, e.model.item)
+		// e.currentTarget.classList.toggle('active');
 	}
 
 	setNote(e) {
 		this.setActiveNote(e);
+		// this.notifyPath('fretboard.0.notes.0.active')
 		// console.log(e.model.data)
-		// e.model.set('item.symbol', 'X');
+		// e.model.set('item.name', 'X');
 		// this.fretboard[0].notes[0].symbol = 'X'
 		// this.notifyPath('fretboard.0.notes.0.symbol')
 		// this.set('fretboard.0.notes.0.symbol', 'X')

@@ -11,7 +11,11 @@
 			<template is="dom-repeat" items="{{fretboard}}">
 				<div class$="fret-{{item.fret}}">
 					<template is="dom-repeat" items="{{item.notes}}">
-						<a tabindex="0" on-click="setNote"><b>{{item.symbol}}</b></a>
+						<a tabindex="0"
+						   on-click="setNote"
+						   class$="[[_activeNote(item.active)]]">
+							<b>{{item.symbol}}</b>
+						</a>
 					</template>
 				</div>
 			</template>
