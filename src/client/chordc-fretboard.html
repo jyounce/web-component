@@ -4,7 +4,8 @@
 
 <dom-module id="chordc-fretboard">
 	<template>
-		<!--#include styles-->
+		<link rel="stylesheet" href="[[importPath]]bower_components/reset-css/reset.css">
+		<link rel="stylesheet" href="[[importPath]]styles/fretboard.css">
 
 		<!-- FRETBOARD -->
 		<div class$="fretboard [[rotate]] [[_flip(flip)]]">
@@ -19,13 +20,13 @@
 					</template>
 				</div>
 			</template>
-			<img src="images/fretboard.png">
+			<img src="[[importPath]]images/fretboard.png">
 		</div>
 
 		<iron-ajax
 			handle-as="json"
 			id="getFretboard"
-			url="/api/fretboard"
+			url="[[importPath]]api/fretboard"
 			debounce-duration="300"
 			on-response="setFretboard">
 		</iron-ajax>
