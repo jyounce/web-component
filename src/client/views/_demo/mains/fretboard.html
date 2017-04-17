@@ -4,8 +4,9 @@
 		<nav><a href="/demo/staff">musical staff</a></nav>
 	</h3>
 
+	<!-- INTERACTION -->
 	<form name="demoForm">
-		rotate:
+		Rotate:
 		<label class="radio">
 			<input type="radio" ng-model="rotate.direction"> none
 		</label>
@@ -19,6 +20,12 @@
 			<input type="checkbox" ng-model="flip"> flip
 		</label>
 	</form>
+
+	<!-- BINDING -->
+	<div class="bottom-bumper">
+		<span>Note: {{note}}</span>
+	</div>
+
 
 	<!-- FRETBOARD -->
 	<chordc-fretboard

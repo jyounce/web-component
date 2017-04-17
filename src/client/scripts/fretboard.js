@@ -51,11 +51,34 @@ class Fretboard extends Polymer.Element {
 	/* events
 	 *********/
 	setNote(e) {
-		e.model.set('item.symbol', 'X');
+		// console.log(e.model.data)
+		// e.model.set('item.symbol', 'X');
+		var note = e.model.item.symbol;
+		this.dispatchEvent(
+			new CustomEvent(
+				'note-selected',
+				{
+					detail: { note }
+				}
+			)
+		);
 	}
 }
 
 customElements.define(Fretboard.is, Fretboard);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
