@@ -3,10 +3,9 @@
 <link rel="import" href="bower_components/iron-ajax/iron-ajax.html">
 
 <dom-module id="chordc-fretboard">
-	<template>
-		<link rel="stylesheet" href="[[importPath]]bower_components/reset-css/reset.css">
-		<link rel="stylesheet" href="[[importPath]]styles/fretboard.css">
+	<!--#include styles-->
 
+	<template>
 		<!-- FRETBOARD -->
 		<div class$="fretboard [[rotate]] [[_flip(flip)]]">
 			<template is="dom-repeat" items="{{fretboard}}">

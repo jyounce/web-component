@@ -13,6 +13,10 @@ common:
 		autoInject: false
 		src:
 			filePath: 'chordc-fretboard.html'
+		styles:
+			attrs:
+				rel: 'import'
+				type: 'css'
 
 	order:
 		styles:
