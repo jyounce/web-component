@@ -8,16 +8,13 @@ class Fretboard extends Polymer.Element {
 	 ************/
 	constructor() {
 		super();
-		// console.log('constructor');
 	}
 	ready() {
 		super.ready();
-		// console.log('ready');
 		this.$.getFretboard.generateRequest();
 	}
 	connectedCallback() {
 		super.connectedCallback();
-		// console.log('connectedCallback');
 	}
 
 	/* properties
@@ -28,13 +25,33 @@ class Fretboard extends Polymer.Element {
 				type: Boolean
 			},
 			rotate: {
-				type: String,
-				// notify: true
+				type: String
 			},
 			fretboard: {
+				type: Array
+			},
+			activeNote: {
+				type: String,
+				notify: true
+			},
+			activeNotes: {
 				type: Array,
+				notify: true,
+				value: []
 			}
 		}
+	}
+
+	/* complex observers
+	 ********************/
+	static get observers() {
+		return [
+			'fretboardChanged(fretboard.*)'
+		]
+	}
+
+	fretboardChanged(fretboard) {
+		// console.log(fretboard)
 	}
 
 	/* computed bindings
@@ -58,11 +75,16 @@ class Fretboard extends Polymer.Element {
 		var fretboard = this.get(`fretboard`);
 
 		for (var i = 0; i < fretboard.length; i++) {
-			if (model.item.active) continue
+			let stringNote = fretboard[i].notes[model.index];
+			if (!stringNote.active) continue
+			if (stringNote == model.item) continue
 			this.set(`fretboard.${i}.notes.${model.index}.active`, false);
 		}
 
 		model.set('item.active', !model.item.active);
+		this.set('activeNote', model.item.active ? model.item.symbol : null)
+		// this.set('activeNotes.1', model.item.symbol)
+		// this.push('activeNotes', model.item.symbol);
 	}
 
 	isNoteKey(e) { //: boolean
@@ -73,28 +95,19 @@ class Fretboard extends Polymer.Element {
 	}
 
 	setNote(e) {
-		if (typeof e.key == 'string' && !this.isNoteKey(e))
-			return
-
+		if (typeof e.key == 'string' && !this.isNoteKey(e)) return
 		var model = e.model;
 		this.setActiveNote(model);
-		// this.notifyPath('fretboard.0.notes.0.active')
-		// console.log(e.model.data)
-		// e.model.set('item.name', 'X');
-		// this.fretboard[0].notes[0].symbol = 'X'
-		// this.notifyPath('fretboard.0.notes.0.symbol')
-		// this.set('fretboard.0.notes.0.symbol', 'X')
-		// console.log(this.fretboard[0].notes[0].symbol)
-		// console.log(this.get('fretboard.*'))
-		// this.set('rotate', 'left');
+		// this.noteSelectedEvent(model);
+	}
+
+	// custom event out example
+	noteSelectedEvent(model) {
 		var note = model.item.active ? model.item.symbol : null;
 		this.dispatchEvent(
-			new CustomEvent(
-				'note-selected',
-				{
-					detail: { note }
-				}
-			)
+			new CustomEvent('note-selected', {
+				detail: { note }
+			})
 		);
 	}
 }

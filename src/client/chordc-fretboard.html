@@ -6,6 +6,7 @@
 	<!--#include styles-->
 
 	<template>
+
 		<!-- FRETBOARD -->
 		<div class$="fretboard [[rotate]] [[_flip(flip)]]">
 			<template is="dom-repeat" items="{{fretboard}}">
@@ -22,6 +23,12 @@
 			</template>
 			<img src="[[importPath]]images/fretboard.png">
 		</div>
+
+		<!-- EXPERIMENT -->
+		<!-- <div class="experiment">
+			note: {{activeNote}}<br>
+			notes: {{activeNotes}}
+		</div> -->
 
 		<iron-ajax
 			handle-as="json"
