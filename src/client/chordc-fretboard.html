@@ -13,6 +13,7 @@
 					<template is="dom-repeat" items="{{item.notes}}">
 						<a tabindex="0"
 						   on-click="setNote"
+						   on-keydown="setNote"
 						   class$="[[_activeNote(item.active)]]">
 							<b>{{item.symbol}}</b>
 						</a>

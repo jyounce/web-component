@@ -55,7 +55,7 @@ class Fretboard extends Polymer.Element {
 	/* events
 	 *********/
 	setActiveNote(model) {
-		var fretboard = this.get(`fretboard`)
+		var fretboard = this.get(`fretboard`);
 
 		for (var i = 0; i < fretboard.length; i++) {
 			if (model.item.active) continue
@@ -63,10 +63,19 @@ class Fretboard extends Polymer.Element {
 		}
 
 		model.set('item.active', !model.item.active);
-		// e.currentTarget.classList.toggle('active');
+	}
+
+	isNoteKey(e) { //: boolean
+		var accepted = [' ', 'Enter'];
+		if (accepted.indexOf(e.key) === -1) return false;
+		e.preventDefault();
+		return true;
 	}
 
 	setNote(e) {
+		if (typeof e.key == 'string' && !this.isNoteKey(e))
+			return
+
 		var model = e.model;
 		this.setActiveNote(model);
 		// this.notifyPath('fretboard.0.notes.0.active')
