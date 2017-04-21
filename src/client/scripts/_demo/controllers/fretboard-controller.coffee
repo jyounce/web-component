@@ -4,8 +4,8 @@ angular.module('demo').controller 'fretboardController', ['$scope', '$element',
 		# ==========
 		$scope.flip   = false
 		$scope.rotate = undefined
-		$scope.note   = undefined
-		$scope.notes  = undefined
+		$scope.note   = undefined # {}
+		$scope.notes  = undefined # [{}]
 
 		# fretboard
 		# =========
@@ -14,13 +14,15 @@ angular.module('demo').controller 'fretboardController', ['$scope', '$element',
 		# events
 		# ======
 		fretboard.addEventListener 'active-note-changed', (e) ->
-			# console.log e.detail.value
+			# console.log e.detail
 			$scope.note = e.detail.value
 			$scope.$apply()
 
-		fretboard.addEventListener 'active-notes-changed', (e) ->
-			console.log e
-			# $scope.note = e.detail.value
+		# fretboard.addEventListener 'active-notes-changed', (e) ->
+			# console.log e.detail.value
+			# console.log fretboard.activeNotes
+			# console.log e.detail.value.indexSplices
+			# $scope.notes = fretboard.activeNotes
 			# $scope.$apply()
 
 		# custom event example

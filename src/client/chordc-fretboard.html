@@ -24,11 +24,18 @@
 			<img src="[[importPath]]images/fretboard.png">
 		</div>
 
-		<!-- EXPERIMENT -->
-		<!-- <div class="experiment">
-			note: {{activeNote}}<br>
-			notes: {{activeNotes}}
-		</div> -->
+		<!-- TESTING AREA -->
+		<div class="testing">
+			<span class="note">
+				note:
+				<pre>[[_stringify(activeNote)]]</pre>
+			</span>
+			<hr>
+			<span>
+				notes:
+				<pre>[[_stringify(activeNotes, activeNotes.*)]]</pre>
+			</span>
+		</div>
 
 		<iron-ajax
 			handle-as="json"
